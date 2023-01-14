@@ -5,18 +5,19 @@ complete -cf doas
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-alias la='ls -a'
-alias ll='ls -l'
+alias la='ls -a --color=auto'
+alias ll='ls -l --color=auto'
+alias l.='ls -a --color=auto | egrep "^\."'
 alias xi='sudo xbps-install'
 alias xr='sudo xbps-remove -R'
 alias xq='xbps-query -Rs'
 alias update='sudo xbps-install -Su'
 alias wifi='sudo sv restart iwd'
-alias vifm='./.config/vifm/scripts/vifmrun'
+#alias vifm='./.config/vifm/scripts/vifmrun'
 alias reboot='sudo reboot'
 alias shut='sudo poweroff'
 alias vlm='pactl set-sink-volume @DEFAULT_SINK@'
-#alias chrome='dbus-launch flatpak run com.google.Chrome'
+alias grep='grep --color=auto'
 
 # confirm before overwriting something
 alias cp="cp -i"
